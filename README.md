@@ -1,0 +1,2 @@
+# terraprac
+practiseground for terraform
