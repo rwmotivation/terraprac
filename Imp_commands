@@ -1,0 +1,15 @@
+Install Terraform on Ubuntu 22.04
+
+ssh -l ubuntu -i ekey.pem 52.205.2.216
+sudo apt update && apt upgrade -y 
+sudo apt install -y gnupg software-properties-common curl
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+sudo apt update 
+sudo apt install terraform
+terraform -help init
+terraform -v 
+touch ~/.bashrc
+terraform -install-autocomplete
+#to install aws cli become root and supplt below commands 
+apt install awscli
